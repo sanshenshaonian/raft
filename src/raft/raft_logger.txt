@@ -1,0 +1,641 @@
+2023/03/21 13:34:26 [0]: start leader election, term 1
+
+2023/03/21 13:34:26 [0]: term 1 send vote request to 2
+
+2023/03/21 13:34:26 [1]: start leader election, term 1
+
+2023/03/21 13:34:26 [2]: start leader election, term 1
+
+2023/03/21 13:34:26 [2]: term 1 send vote request to 0
+
+2023/03/21 13:34:26 [0]: term 1 send vote request to 1
+
+2023/03/21 13:34:26 [1]: term 1 send vote request to 2
+
+2023/03/21 13:34:26 [1]: term 1 send vote request to 0
+
+2023/03/21 13:34:26 [2]: term 1 send vote request to 1
+
+2023/03/21 13:34:26 [2]: 1 没有投给me，结束
+
+2023/03/21 13:34:26 [2]: 0 没有投给me，结束
+
+2023/03/21 13:34:26 [1]: 2 没有投给me，结束
+
+2023/03/21 13:34:26 [0]: 2 没有投给me，结束
+
+2023/03/21 13:34:26 [0]: 1 没有投给me，结束
+
+2023/03/21 13:34:26 [0]: start leader election, term 2
+
+2023/03/21 13:34:26 [0]: term 2 send vote request to 1
+
+2023/03/21 13:34:26 [0]: term 2 send vote request to 2
+
+2023/03/21 13:34:26 [2]: set term 2
+
+2023/03/21 13:34:26 [1]: set term 2
+
+2023/03/21 13:34:26 [1]: term 2 vote 0
+2023/03/21 13:34:26 [0]: from 1 term一致，且投给0
+
+2023/03/21 13:34:26 [0]: 获得多数选票，可以提前结束
+
+2023/03/21 13:34:26 [0]: 当前term 2 结束
+
+2023/03/21 13:34:26 [0]: leader - nextIndex []int{1, 1, 1}
+2023/03/21 13:34:26 [2]: term 2 vote 0
+2023/03/21 13:34:26 [0]: from 2 term一致，且投给0
+
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [0]: 2 append success next 1 match 0
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [0]: 1 append success next 1 match 0
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [0]: term 2 Start {{Put k  2915367705501010882 1} 2 1}
+2023/03/21 13:34:26 [0]: 2 append success next 1 match 0
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Put k  2915367705501010882 1} 2 1}], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [2]: follower append [[{{Put k  2915367705501010882 1} 2 1}]]
+2023/03/21 13:34:26 [0]: 2 append success next 2 match 1
+2023/03/21 13:34:26 [0] leader尝试提交 index 1
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Put k  2915367705501010882 1} 2 1}], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [1]: follower append [[{{Put k  2915367705501010882 1} 2 1}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 4 0 y 4495610982739884102 1} 2 2}
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 1 0 y 2709076999695476749 1} 2 3}
+2023/03/21 13:34:26 [0]: 1 append success next 2 match 1
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 4 0 y 4495610982739884102 1} 2 2}]]
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 1 0 y 2709076999695476749 1} 2 3}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 2 0 y 3083555979703718286 1} 2 4}
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 3 0 y 2520484518804138490 1} 2 5}
+2023/03/21 13:34:26 [0]: 2 append success next 3 match 2
+2023/03/21 13:34:26 [0] leader尝试提交 index 2
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 2 append success next 4 match 3
+2023/03/21 13:34:26 [0] leader尝试提交 index 3
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3} {{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3} {{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5}]]
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3} {{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 0 0 y 3707513909743097549 1} 2 6}
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3} {{Append k x 2 0 y 3083555979703718286 1} 2 4}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: 2 append success next 6 match 5
+2023/03/21 13:34:26 [0] leader尝试提交 index 4
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0] leader尝试提交 index 5
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: 2 append success next 6 match 5
+2023/03/21 13:34:26 [0]: 1 append success next 6 match 5
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Put k  2915367705501010882 1} 2 1} {{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3}], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Put k  2915367705501010882 1} 2 1} {{Append k x 4 0 y 4495610982739884102 1} 2 2}], prevIndex 0, prevTerm 0
+2023/03/21 13:34:26 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 1 append success next 6 match 5
+2023/03/21 13:34:26 [0]: 1 append success next 6 match 5
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 2 1 y 3083555979703718286 2} 2 7}
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3} {{Append k x 2 0 y 3083555979703718286 1} 2 4}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3} {{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7}], prevIndex 5, prevTerm 2
+2023/03/21 13:34:26 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7}]]
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7}], prevIndex 5, prevTerm 2
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 3 1 y 2520484518804138490 2} 2 8}
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5} {{Append k x 0 0 y 3707513909743097549 1} 2 6}], prevIndex 3, prevTerm 2
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 1 1 y 2709076999695476749 2} 2 9}
+2023/03/21 13:34:26 [0]: 1 append success next 6 match 5
+2023/03/21 13:34:26 [0]: 1 append success next 6 match 5
+2023/03/21 13:34:26 [0]: 2 append success next 8 match 7
+2023/03/21 13:34:26 [0] leader尝试提交 index 6
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0] leader尝试提交 index 7
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: 2 append success next 8 match 7
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5}], prevIndex 3, prevTerm 2
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 0 y 4495610982739884102 1} 2 2} {{Append k x 1 0 y 2709076999695476749 1} 2 3} {{Append k x 2 0 y 3083555979703718286 1} 2 4} {{Append k x 3 0 y 2520484518804138490 1} 2 5} {{Append k x 0 0 y 3707513909743097549 1} 2 6}], prevIndex 1, prevTerm 2
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7} {{Append k x 3 1 y 2520484518804138490 2} 2 8}], prevIndex 5, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 3 1 y 2520484518804138490 2} 2 8}]]
+2023/03/21 13:34:26 [0]: 2 append success next 8 match 7
+2023/03/21 13:34:26 [0]: 1 append success next 7 match 6
+2023/03/21 13:34:26 [0]: 2 append success next 9 match 8
+2023/03/21 13:34:26 [0] leader尝试提交 index 8
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7} {{Append k x 3 1 y 2520484518804138490 2} 2 8}], prevIndex 5, prevTerm 2
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 3 1 y 2520484518804138490 2} 2 8}]]
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7} {{Append k x 3 1 y 2520484518804138490 2} 2 8} {{Append k x 1 1 y 2709076999695476749 2} 2 9}], prevIndex 5, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 1 1 y 2709076999695476749 2} 2 9}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 3 2 y 2520484518804138490 3} 2 10}
+2023/03/21 13:34:26 [0]: 2 append success next 10 match 9
+2023/03/21 13:34:26 [0] leader尝试提交 index 9
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 0 y 3707513909743097549 1} 2 6} {{Append k x 2 1 y 3083555979703718286 2} 2 7} {{Append k x 3 1 y 2520484518804138490 2} 2 8} {{Append k x 1 1 y 2709076999695476749 2} 2 9}], prevIndex 5, prevTerm 2
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 1 1 y 2709076999695476749 2} 2 9}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 2 2 y 3083555979703718286 3} 2 11}
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 1 append success next 9 match 8
+2023/03/21 13:34:26 [0]: 1 append success next 10 match 9
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 1 y 2709076999695476749 2} 2 9} {{Append k x 3 2 y 2520484518804138490 3} 2 10}], prevIndex 8, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 3 2 y 2520484518804138490 3} 2 10}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 1 2 y 2709076999695476749 3} 2 12}
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 4 1 y 4495610982739884102 2} 2 13}
+2023/03/21 13:34:26 [0]: 2 append success next 11 match 10
+2023/03/21 13:34:26 [0] leader尝试提交 index 10
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11} {{Append k x 1 2 y 2709076999695476749 3} 2 12} {{Append k x 4 1 y 4495610982739884102 2} 2 13}], prevIndex 9, prevTerm 2
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11} {{Append k x 1 2 y 2709076999695476749 3} 2 12} {{Append k x 4 1 y 4495610982739884102 2} 2 13}]]
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11}], prevIndex 9, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 2 2 y 3083555979703718286 3} 2 11}]]
+2023/03/21 13:34:26 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11} {{Append k x 1 2 y 2709076999695476749 3} 2 12}], prevIndex 9, prevTerm 2
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: 1 append success next 14 match 13
+2023/03/21 13:34:26 [0] leader尝试提交 index 11
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0] leader尝试提交 index 12
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0] leader尝试提交 index 13
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: 1 append success next 14 match 13
+2023/03/21 13:34:26 [0]: 2 append success next 12 match 11
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11}], prevIndex 9, prevTerm 2
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11} {{Append k x 1 2 y 2709076999695476749 3} 2 12} {{Append k x 4 1 y 4495610982739884102 2} 2 13}], prevIndex 9, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 1 2 y 2709076999695476749 3} 2 12} {{Append k x 4 1 y 4495610982739884102 2} 2 13}]]
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 1 y 3083555979703718286 2} 2 7} {{Append k x 3 1 y 2520484518804138490 2} 2 8} {{Append k x 1 1 y 2709076999695476749 2} 2 9} {{Append k x 3 2 y 2520484518804138490 3} 2 10}], prevIndex 6, prevTerm 2
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 1 y 3083555979703718286 2} 2 7} {{Append k x 3 1 y 2520484518804138490 2} 2 8} {{Append k x 1 1 y 2709076999695476749 2} 2 9} {{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11}], prevIndex 6, prevTerm 2
+2023/03/21 13:34:26 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 1 append success next 14 match 13
+2023/03/21 13:34:26 [0]: 1 append success next 14 match 13
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 2 append success next 14 match 13
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 3 3 y 2520484518804138490 4} 2 14}
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 3 y 2520484518804138490 4} 2 14}], prevIndex 13, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 3 3 y 2520484518804138490 4} 2 14}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 4 2 y 4495610982739884102 3} 2 15}
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11}], prevIndex 9, prevTerm 2
+2023/03/21 13:34:26 [0]: 2 append success next 15 match 14
+2023/03/21 13:34:26 [0] leader尝试提交 index 14
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 2 y 2520484518804138490 3} 2 10} {{Append k x 2 2 y 3083555979703718286 3} 2 11} {{Append k x 1 2 y 2709076999695476749 3} 2 12}], prevIndex 9, prevTerm 2
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 2 append success next 15 match 14
+2023/03/21 13:34:26 [0]: 2 append success next 15 match 14
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 3 y 2520484518804138490 4} 2 14} {{Append k x 4 2 y 4495610982739884102 3} 2 15}], prevIndex 13, prevTerm 2
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 3 3 y 2520484518804138490 4} 2 14} {{Append k x 4 2 y 4495610982739884102 3} 2 15}]]
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 3 y 2520484518804138490 4} 2 14} {{Append k x 4 2 y 4495610982739884102 3} 2 15}], prevIndex 13, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 4 2 y 4495610982739884102 3} 2 15}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 3 4 y 2520484518804138490 5} 2 16}
+2023/03/21 13:34:26 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 3 y 2520484518804138490 4} 2 14}], prevIndex 13, prevTerm 2
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 0 1 y 3707513909743097549 2} 2 17}
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 1 3 y 2709076999695476749 4} 2 18}
+2023/03/21 13:34:26 [0]: 1 append success next 16 match 15
+2023/03/21 13:34:26 [0] leader尝试提交 index 15
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: 2 append success next 16 match 15
+2023/03/21 13:34:26 [0]: 1 append success next 16 match 15
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 2 y 4495610982739884102 3} 2 15} {{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17} {{Append k x 1 3 y 2709076999695476749 4} 2 18}], prevIndex 14, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17} {{Append k x 1 3 y 2709076999695476749 4} 2 18}]]
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 3 y 2520484518804138490 4} 2 14} {{Append k x 4 2 y 4495610982739884102 3} 2 15} {{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17}], prevIndex 13, prevTerm 2
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17}]]
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 4 3 y 4495610982739884102 4} 2 19}
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 2 y 4495610982739884102 3} 2 15} {{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17}], prevIndex 14, prevTerm 2
+2023/03/21 13:34:26 [0]: 2 append success next 19 match 18
+2023/03/21 13:34:26 [0] leader尝试提交 index 16
+2023/03/21 13:34:26 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 3 y 2520484518804138490 4} 2 14} {{Append k x 4 2 y 4495610982739884102 3} 2 15} {{Append k x 3 4 y 2520484518804138490 5} 2 16}], prevIndex 13, prevTerm 2
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0] leader尝试提交 index 17
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0] leader尝试提交 index 18
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: 2 append success next 19 match 18
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 1 append success next 18 match 17
+2023/03/21 13:34:26 [0]: 1 append success next 18 match 17
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 2 3 y 3083555979703718286 4} 2 20}
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 2 y 4495610982739884102 3} 2 15} {{Append k x 3 4 y 2520484518804138490 5} 2 16}], prevIndex 14, prevTerm 2
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 3 y 2520484518804138490 4} 2 14} {{Append k x 4 2 y 4495610982739884102 3} 2 15} {{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17} {{Append k x 1 3 y 2709076999695476749 4} 2 18}], prevIndex 13, prevTerm 2
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 1 3 y 2709076999695476749 4} 2 18}]]
+2023/03/21 13:34:26 [0]: 2 append success next 19 match 18
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 3 y 2709076999695476749 4} 2 18} {{Append k x 4 3 y 4495610982739884102 4} 2 19} {{Append k x 2 3 y 3083555979703718286 4} 2 20}], prevIndex 17, prevTerm 2
+2023/03/21 13:34:26 [0]: 1 append success next 19 match 18
+2023/03/21 13:34:26 [1]: follower append [[{{Append k x 4 3 y 4495610982739884102 4} 2 19} {{Append k x 2 3 y 3083555979703718286 4} 2 20}]]
+2023/03/21 13:34:26 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 1 append success next 21 match 20
+2023/03/21 13:34:26 [0] leader尝试提交 index 19
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0] leader尝试提交 index 20
+2023/03/21 13:34:26 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17} {{Append k x 1 3 y 2709076999695476749 4} 2 18} {{Append k x 4 3 y 4495610982739884102 4} 2 19}], prevIndex 15, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 4 3 y 4495610982739884102 4} 2 19}]]
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [0]: 2 append success next 20 match 19
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 3 y 4495610982739884102 4} 2 19} {{Append k x 2 3 y 3083555979703718286 4} 2 20}], prevIndex 18, prevTerm 2
+2023/03/21 13:34:26 [2]: follower append [[{{Append k x 2 3 y 3083555979703718286 4} 2 20}]]
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17} {{Append k x 1 3 y 2709076999695476749 4} 2 18} {{Append k x 4 3 y 4495610982739884102 4} 2 19}], prevIndex 15, prevTerm 2
+2023/03/21 13:34:26 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17} {{Append k x 1 3 y 2709076999695476749 4} 2 18}], prevIndex 15, prevTerm 2
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 3 5 y 2520484518804138490 6} 2 21}
+2023/03/21 13:34:26 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:26 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:26 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 4 y 2520484518804138490 5} 2 16} {{Append k x 0 1 y 3707513909743097549 2} 2 17} {{Append k x 1 3 y 2709076999695476749 4} 2 18}], prevIndex 15, prevTerm 2
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 0 2 y 3707513909743097549 3} 2 22}
+2023/03/21 13:34:26 [0]: 1 append success next 21 match 20
+2023/03/21 13:34:26 [0]: term 2 Start {{Append k x 1 4 y 2709076999695476749 5} 2 23}
+2023/03/21 13:34:26 [0]: 1 append success next 21 match 20
+2023/03/21 13:34:26 [0]: 2 append success next 21 match 20
+2023/03/21 13:34:26 [0]: 2 append success next 21 match 20
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23}], prevIndex 20, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23}]]
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 4 4 y 4495610982739884102 5} 2 24}
+2023/03/21 13:34:27 [0]: 1 append success next 24 match 23
+2023/03/21 13:34:27 [0] leader尝试提交 index 21
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 22
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 23
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 3 6 y 2520484518804138490 7} 2 25}
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 4 y 4495610982739884102 5} 2 24} {{Append k x 3 6 y 2520484518804138490 7} 2 25}], prevIndex 23, prevTerm 2
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23} {{Append k x 4 4 y 4495610982739884102 5} 2 24}], prevIndex 20, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23} {{Append k x 4 4 y 4495610982739884102 5} 2 24}]]
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 4 4 y 4495610982739884102 5} 2 24} {{Append k x 3 6 y 2520484518804138490 7} 2 25}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 0 3 y 3707513909743097549 4} 2 26}
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 26 match 25
+2023/03/21 13:34:27 [0] leader尝试提交 index 24
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 25
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 5 y 2520484518804138490 6} 2 21}], prevIndex 20, prevTerm 2
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22}], prevIndex 20, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 25 match 24
+2023/03/21 13:34:27 [0]: 1 append success next 26 match 25
+2023/03/21 13:34:27 [0]: 1 append success next 26 match 25
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 3 y 3083555979703718286 4} 2 20} {{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22}], prevIndex 19, prevTerm 2
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 3 y 3083555979703718286 4} 2 20} {{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23}], prevIndex 19, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 25 match 24
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 3 y 3083555979703718286 4} 2 20} {{Append k x 3 5 y 2520484518804138490 6} 2 21}], prevIndex 19, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 25 match 24
+2023/03/21 13:34:27 [0]: 2 append success next 25 match 24
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23} {{Append k x 4 4 y 4495610982739884102 5} 2 24} {{Append k x 3 6 y 2520484518804138490 7} 2 25}], prevIndex 20, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 3 6 y 2520484518804138490 7} 2 25}]]
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 4 y 4495610982739884102 5} 2 24} {{Append k x 3 6 y 2520484518804138490 7} 2 25} {{Append k x 0 3 y 3707513909743097549 4} 2 26}], prevIndex 23, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 0 3 y 3707513909743097549 4} 2 26}]]
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23} {{Append k x 4 4 y 4495610982739884102 5} 2 24} {{Append k x 3 6 y 2520484518804138490 7} 2 25} {{Append k x 0 3 y 3707513909743097549 4} 2 26}], prevIndex 20, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 0 3 y 3707513909743097549 4} 2 26}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 1 5 y 2709076999695476749 6} 2 27}
+2023/03/21 13:34:27 [0]: 2 append success next 26 match 25
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 5 y 2520484518804138490 6} 2 21} {{Append k x 0 2 y 3707513909743097549 3} 2 22} {{Append k x 1 4 y 2709076999695476749 5} 2 23} {{Append k x 4 4 y 4495610982739884102 5} 2 24}], prevIndex 20, prevTerm 2
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 3 y 3707513909743097549 4} 2 26} {{Append k x 1 5 y 2709076999695476749 6} 2 27}], prevIndex 25, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 1 5 y 2709076999695476749 6} 2 27}]]
+2023/03/21 13:34:27 [0]: 1 append success next 27 match 26
+2023/03/21 13:34:27 [0] leader尝试提交 index 26
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 27 match 26
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 2 append success next 27 match 26
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 1 append success next 28 match 27
+2023/03/21 13:34:27 [0] leader尝试提交 index 27
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 4 y 4495610982739884102 5} 2 24} {{Append k x 3 6 y 2520484518804138490 7} 2 25} {{Append k x 0 3 y 3707513909743097549 4} 2 26}], prevIndex 23, prevTerm 2
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 3 7 y 2520484518804138490 8} 2 28}
+2023/03/21 13:34:27 [0]: 1 append success next 28 match 27
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 5 y 2709076999695476749 6} 2 27} {{Append k x 3 7 y 2520484518804138490 8} 2 28}], prevIndex 26, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 1 5 y 2709076999695476749 6} 2 27} {{Append k x 3 7 y 2520484518804138490 8} 2 28}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 0 4 y 3707513909743097549 5} 2 29}
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 6 y 2520484518804138490 7} 2 25} {{Append k x 0 3 y 3707513909743097549 4} 2 26} {{Append k x 1 5 y 2709076999695476749 6} 2 27}], prevIndex 24, prevTerm 2
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 2 4 y 3083555979703718286 5} 2 30}
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 1 6 y 2709076999695476749 7} 2 31}
+2023/03/21 13:34:27 [0]: 2 append success next 29 match 28
+2023/03/21 13:34:27 [0] leader尝试提交 index 28
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 2 append success next 29 match 28
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 5 y 2709076999695476749 6} 2 27} {{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30}], prevIndex 26, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30}]]
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 7 y 2520484518804138490 8} 2 28}], prevIndex 27, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 3 7 y 2520484518804138490 8} 2 28}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 5 y 2709076999695476749 6} 2 27} {{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30} {{Append k x 1 6 y 2709076999695476749 7} 2 31}], prevIndex 26, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 1 6 y 2709076999695476749 7} 2 31}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 3 8 y 2520484518804138490 9} 2 32}
+2023/03/21 13:34:27 [0]: 2 append success next 31 match 30
+2023/03/21 13:34:27 [0] leader尝试提交 index 29
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 30
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30}], prevIndex 27, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30}]]
+2023/03/21 13:34:27 [0]: 1 append success next 29 match 28
+2023/03/21 13:34:27 [0]: 2 append success next 32 match 31
+2023/03/21 13:34:27 [0] leader尝试提交 index 31
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29}], prevIndex 27, prevTerm 2
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 1 append success next 31 match 30
+2023/03/21 13:34:27 [0]: 1 append success next 31 match 30
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30} {{Append k x 1 6 y 2709076999695476749 7} 2 31} {{Append k x 3 8 y 2520484518804138490 9} 2 32}], prevIndex 28, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 3 8 y 2520484518804138490 9} 2 32}]]
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30} {{Append k x 1 6 y 2709076999695476749 7} 2 31}], prevIndex 27, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 1 6 y 2709076999695476749 7} 2 31}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 0 5 y 3707513909743097549 6} 2 33}
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30} {{Append k x 1 6 y 2709076999695476749 7} 2 31} {{Append k x 3 8 y 2520484518804138490 9} 2 32}], prevIndex 27, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 3 8 y 2520484518804138490 9} 2 32}]]
+2023/03/21 13:34:27 [0]: 1 append success next 32 match 31
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 5 y 2709076999695476749 6} 2 27} {{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29}], prevIndex 26, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 33 match 32
+2023/03/21 13:34:27 [0] leader尝试提交 index 32
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 2 append success next 33 match 32
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 1 append success next 33 match 32
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 3 7 y 2520484518804138490 8} 2 28} {{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30} {{Append k x 1 6 y 2709076999695476749 7} 2 31} {{Append k x 3 8 y 2520484518804138490 9} 2 32}], prevIndex 27, prevTerm 2
+2023/03/21 13:34:27 [0]: 1 append success next 33 match 32
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 6 y 2709076999695476749 7} 2 31} {{Append k x 3 8 y 2520484518804138490 9} 2 32} {{Append k x 0 5 y 3707513909743097549 6} 2 33}], prevIndex 30, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 0 5 y 3707513909743097549 6} 2 33}]]
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 34 match 33
+2023/03/21 13:34:27 [0] leader尝试提交 index 33
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 4 y 3707513909743097549 5} 2 29} {{Append k x 2 4 y 3083555979703718286 5} 2 30} {{Append k x 1 6 y 2709076999695476749 7} 2 31} {{Append k x 3 8 y 2520484518804138490 9} 2 32}], prevIndex 28, prevTerm 2
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 1 7 y 2709076999695476749 8} 2 34}
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 2 5 y 3083555979703718286 6} 2 35}
+2023/03/21 13:34:27 [0]: 2 append success next 33 match 32
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 3 9 y 2520484518804138490 10} 2 36}
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 7 y 2709076999695476749 8} 2 34} {{Append k x 2 5 y 3083555979703718286 6} 2 35} {{Append k x 3 9 y 2520484518804138490 10} 2 36}], prevIndex 33, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 1 7 y 2709076999695476749 8} 2 34} {{Append k x 2 5 y 3083555979703718286 6} 2 35} {{Append k x 3 9 y 2520484518804138490 10} 2 36}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 5 y 3707513909743097549 6} 2 33} {{Append k x 1 7 y 2709076999695476749 8} 2 34} {{Append k x 2 5 y 3083555979703718286 6} 2 35}], prevIndex 32, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 0 5 y 3707513909743097549 6} 2 33} {{Append k x 1 7 y 2709076999695476749 8} 2 34} {{Append k x 2 5 y 3083555979703718286 6} 2 35}]]
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 1 append success next 37 match 36
+2023/03/21 13:34:27 [0] leader尝试提交 index 34
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 35
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 36
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 7 y 2709076999695476749 8} 2 34} {{Append k x 2 5 y 3083555979703718286 6} 2 35}], prevIndex 33, prevTerm 2
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 5 y 3707513909743097549 6} 2 33} {{Append k x 1 7 y 2709076999695476749 8} 2 34} {{Append k x 2 5 y 3083555979703718286 6} 2 35} {{Append k x 3 9 y 2520484518804138490 10} 2 36}], prevIndex 32, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 3 9 y 2520484518804138490 10} 2 36}]]
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 7 y 2709076999695476749 8} 2 34}], prevIndex 33, prevTerm 2
+2023/03/21 13:34:27 [0]: 1 append success next 37 match 36
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 5 y 3707513909743097549 6} 2 33} {{Append k x 1 7 y 2709076999695476749 8} 2 34}], prevIndex 32, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 35 match 34
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 1 8 y 2709076999695476749 9} 2 37}
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 5 y 3707513909743097549 6} 2 33} {{Append k x 1 7 y 2709076999695476749 8} 2 34} {{Append k x 2 5 y 3083555979703718286 6} 2 35} {{Append k x 3 9 y 2520484518804138490 10} 2 36}], prevIndex 32, prevTerm 2
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 2 6 y 3083555979703718286 7} 2 38}
+2023/03/21 13:34:27 [0]: 2 append success next 37 match 36
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [], prevIndex 36, prevTerm 2
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 8 y 2709076999695476749 9} 2 37}], prevIndex 36, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 1 8 y 2709076999695476749 9} 2 37}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 5 y 3083555979703718286 6} 2 35} {{Append k x 3 9 y 2520484518804138490 10} 2 36} {{Append k x 1 8 y 2709076999695476749 9} 2 37}], prevIndex 34, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 1 8 y 2709076999695476749 9} 2 37}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 4 5 y 4495610982739884102 6} 2 39}
+2023/03/21 13:34:27 [0]: 1 append success next 37 match 36
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 5 y 3083555979703718286 6} 2 35} {{Append k x 3 9 y 2520484518804138490 10} 2 36} {{Append k x 1 8 y 2709076999695476749 9} 2 37} {{Append k x 2 6 y 3083555979703718286 7} 2 38}], prevIndex 34, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 2 6 y 3083555979703718286 7} 2 38}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 0 6 y 3707513909743097549 7} 2 40}
+2023/03/21 13:34:27 [0]: 1 append success next 38 match 37
+2023/03/21 13:34:27 [0] leader尝试提交 index 37
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 2 append success next 38 match 37
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 2 append success next 39 match 38
+2023/03/21 13:34:27 [0] leader尝试提交 index 38
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 8 y 2709076999695476749 9} 2 37} {{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40}], prevIndex 36, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 1 9 y 2709076999695476749 10} 2 41}
+2023/03/21 13:34:27 [0]: 2 append success next 41 match 40
+2023/03/21 13:34:27 [0] leader尝试提交 index 39
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 40
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40} {{Append k x 1 9 y 2709076999695476749 10} 2 41}], prevIndex 37, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40} {{Append k x 1 9 y 2709076999695476749 10} 2 41}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 8 y 2709076999695476749 9} 2 37} {{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39}], prevIndex 36, prevTerm 2
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 2 7 y 3083555979703718286 8} 2 42}
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 8 y 2709076999695476749 9} 2 37} {{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40}], prevIndex 36, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 41 match 40
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40} {{Append k x 1 9 y 2709076999695476749 10} 2 41}], prevIndex 37, prevTerm 2
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 1 append success next 41 match 40
+2023/03/21 13:34:27 [0]: 1 append success next 42 match 41
+2023/03/21 13:34:27 [0] leader尝试提交 index 41
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 42 match 41
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 8 y 2709076999695476749 9} 2 37} {{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39}], prevIndex 36, prevTerm 2
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 1 append success next 42 match 41
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40} {{Append k x 1 9 y 2709076999695476749 10} 2 41}], prevIndex 38, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 1 9 y 2709076999695476749 10} 2 41}]]
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 9 y 2709076999695476749 10} 2 41} {{Append k x 2 7 y 3083555979703718286 8} 2 42}], prevIndex 40, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 2 7 y 3083555979703718286 8} 2 42}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 4 6 y 4495610982739884102 7} 2 43}
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 2 append success next 43 match 42
+2023/03/21 13:34:27 [0] leader尝试提交 index 42
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 6 y 3083555979703718286 7} 2 38} {{Append k x 4 5 y 4495610982739884102 6} 2 39} {{Append k x 0 6 y 3707513909743097549 7} 2 40} {{Append k x 1 9 y 2709076999695476749 10} 2 41} {{Append k x 2 7 y 3083555979703718286 8} 2 42}], prevIndex 37, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 2 7 y 3083555979703718286 8} 2 42}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 9 y 2709076999695476749 10} 2 41}], prevIndex 40, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 43 match 42
+2023/03/21 13:34:27 [0]: 1 append success next 43 match 42
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 7 y 3083555979703718286 8} 2 42} {{Append k x 4 6 y 4495610982739884102 7} 2 43}], prevIndex 41, prevTerm 2
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 1 9 y 2709076999695476749 10} 2 41} {{Append k x 2 7 y 3083555979703718286 8} 2 42} {{Append k x 4 6 y 4495610982739884102 7} 2 43}], prevIndex 40, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 4 6 y 4495610982739884102 7} 2 43}]]
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 4 6 y 4495610982739884102 7} 2 43}]]
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 1 append success next 44 match 43
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0] leader尝试提交 index 43
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 2 append success next 44 match 43
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 2 8 y 3083555979703718286 9} 2 44}
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 8 y 3083555979703718286 9} 2 44}], prevIndex 43, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 2 8 y 3083555979703718286 9} 2 44}]]
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 8 y 3083555979703718286 9} 2 44}], prevIndex 43, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 2 8 y 3083555979703718286 9} 2 44}]]
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 45 match 44
+2023/03/21 13:34:27 [0] leader尝试提交 index 44
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 8 y 3083555979703718286 9} 2 44}], prevIndex 43, prevTerm 2
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 8 y 3083555979703718286 9} 2 44}], prevIndex 43, prevTerm 2
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 0 7 y 3707513909743097549 8} 2 45}
+2023/03/21 13:34:27 [0]: 2 append success next 45 match 44
+2023/03/21 13:34:27 [0]: 1 append success next 45 match 44
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 7 y 3707513909743097549 8} 2 45}], prevIndex 44, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 0 7 y 3707513909743097549 8} 2 45}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 8 y 3083555979703718286 9} 2 44} {{Append k x 0 7 y 3707513909743097549 8} 2 45}], prevIndex 43, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 0 7 y 3707513909743097549 8} 2 45}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 2 9 y 3083555979703718286 10} 2 46}
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 4 7 y 4495610982739884102 8} 2 47}
+2023/03/21 13:34:27 [0]: 2 append success next 46 match 45
+2023/03/21 13:34:27 [0] leader尝试提交 index 45
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 46 match 45
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 0 8 y 3707513909743097549 9} 2 48}
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 7 y 3707513909743097549 8} 2 45} {{Append k x 2 9 y 3083555979703718286 10} 2 46} {{Append k x 4 7 y 4495610982739884102 8} 2 47}], prevIndex 44, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 2 9 y 3083555979703718286 10} 2 46} {{Append k x 4 7 y 4495610982739884102 8} 2 47}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 9 y 3083555979703718286 10} 2 46} {{Append k x 4 7 y 4495610982739884102 8} 2 47} {{Append k x 0 8 y 3707513909743097549 9} 2 48}], prevIndex 45, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 2 9 y 3083555979703718286 10} 2 46} {{Append k x 4 7 y 4495610982739884102 8} 2 47} {{Append k x 0 8 y 3707513909743097549 9} 2 48}]]
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 9 y 3083555979703718286 10} 2 46} {{Append k x 4 7 y 4495610982739884102 8} 2 47}], prevIndex 45, prevTerm 2
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 7 y 3707513909743097549 8} 2 45} {{Append k x 2 9 y 3083555979703718286 10} 2 46}], prevIndex 44, prevTerm 2
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 2 append success next 49 match 48
+2023/03/21 13:34:27 [0] leader尝试提交 index 46
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 47
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0] leader尝试提交 index 48
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 47 match 46
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 7 y 3707513909743097549 8} 2 45} {{Append k x 2 9 y 3083555979703718286 10} 2 46}], prevIndex 44, prevTerm 2
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 2 append success next 49 match 48
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 9 y 3083555979703718286 10} 2 46} {{Append k x 4 7 y 4495610982739884102 8} 2 47}], prevIndex 45, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 49 match 48
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 2 9 y 3083555979703718286 10} 2 46} {{Append k x 4 7 y 4495610982739884102 8} 2 47} {{Append k x 0 8 y 3707513909743097549 9} 2 48}], prevIndex 45, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 0 8 y 3707513909743097549 9} 2 48}]]
+2023/03/21 13:34:27 [0]: 1 append success next 49 match 48
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 0 9 y 3707513909743097549 10} 2 49}
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 9 y 3707513909743097549 10} 2 49}], prevIndex 48, prevTerm 2
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 9 y 3707513909743097549 10} 2 49}], prevIndex 48, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 0 9 y 3707513909743097549 10} 2 49}]]
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 0 9 y 3707513909743097549 10} 2 49}]]
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 50 match 49
+2023/03/21 13:34:27 [0] leader尝试提交 index 49
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 2 append success next 50 match 49
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 9 y 3707513909743097549 10} 2 49}], prevIndex 48, prevTerm 2
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 4 8 y 4495610982739884102 9} 2 50}
+2023/03/21 13:34:27 [0]: 1 append success next 50 match 49
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 0 9 y 3707513909743097549 10} 2 49}], prevIndex 48, prevTerm 2
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 8 y 4495610982739884102 9} 2 50}], prevIndex 49, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 4 8 y 4495610982739884102 9} 2 50}]]
+2023/03/21 13:34:27 [0]: 2 append success next 50 match 49
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 1 append success next 51 match 50
+2023/03/21 13:34:27 [0] leader尝试提交 index 50
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 8 y 4495610982739884102 9} 2 50}], prevIndex 49, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 4 8 y 4495610982739884102 9} 2 50}]]
+2023/03/21 13:34:27 [0]: term 2 Start {{Append k x 4 9 y 4495610982739884102 10} 2 51}
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 8 y 4495610982739884102 9} 2 50} {{Append k x 4 9 y 4495610982739884102 10} 2 51}], prevIndex 49, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Append k x 4 9 y 4495610982739884102 10} 2 51}]]
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: 2 append success next 52 match 51
+2023/03/21 13:34:27 [0] leader尝试提交 index 51
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: term 2 Start {{Get k  2915367705501010882 2} 2 52}
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 9 y 4495610982739884102 10} 2 51} {{Get k  2915367705501010882 2} 2 52}], prevIndex 50, prevTerm 2
+2023/03/21 13:34:27 [1]: follower append [[{{Append k x 4 9 y 4495610982739884102 10} 2 51} {{Get k  2915367705501010882 2} 2 52}]]
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 8 y 4495610982739884102 9} 2 50} {{Append k x 4 9 y 4495610982739884102 10} 2 51}], prevIndex 49, prevTerm 2
+2023/03/21 13:34:27 [0]: 2 append success next 52 match 51
+2023/03/21 13:34:27 [1]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [1]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [1]: (term 2) follower 收到 [0] AppendEntries [{{Append k x 4 9 y 4495610982739884102 10} 2 51}], prevIndex 50, prevTerm 2
+2023/03/21 13:34:27 [0]: 1 append success next 52 match 51
+2023/03/21 13:34:27 [2]: (term 2) follower 收到 [0] AppendEntries [{{Get k  2915367705501010882 2} 2 52}], prevIndex 51, prevTerm 2
+2023/03/21 13:34:27 [2]: follower append [[{{Get k  2915367705501010882 2} 2 52}]]
+2023/03/21 13:34:27 [2]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: 2 append success next 53 match 52
+2023/03/21 13:34:27 [0] leader尝试提交 index 52
+2023/03/21 13:34:27 [2]: rf.applyCond.Wait()
+2023/03/21 13:34:27 [0]: rf.applyCond.Broadcast()
+2023/03/21 13:34:27 [0]: rf.applyCond.Wait()
